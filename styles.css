@@ -1,0 +1,255 @@
+/* Animazioni Smooth */
+section {
+    transition: all 0.3s ease-in-out;
+}
+section:hover {
+    transform: scale(1.02);
+}
+
+/* Navbar personalizzata */
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    transition: color 0.3s;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #0078d7;
+}
+
+/* Hero Section */
+header {
+    background: linear-gradient(to bottom, #000, #333);
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+/* Stile generale dell'header */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000, #333);
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Stile per l'immagine */
+.hero-img-container {
+    margin-top: 20px;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero-img {
+    max-width: 600px; /* Dimensioni moderate */
+    height: auto;
+    border-radius: 40%; /* Forma circolare */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Effetto durante lo scroll */
+.hero.scrolled .hero-img-container {
+    opacity: 0.5; /* Riduci meno l'opacità */
+    transform: translateY(-30px); /* Spostamento meno drastico */
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra */
+    z-index: 1030; /* Assicurati che sia visibile sopra gli altri elementi */
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9); /* Cambia il colore della navbar durante lo scroll */
+}
+
+.navbar .nav-link {
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #0078d7;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.navbar .nav-link:hover {
+    color: #0078d7; /* Cambia colore quando il mouse passa sopra */
+    text-shadow: 2px 2px 5px rgba(0, 120, 215, 0.5); /* Effetto ombra luminosa */
+}
+/* Stile per la navbar-brand */
+.navbar-brand {
+    font-size: 1.5rem; /* Dimensione maggiore per evidenziare */
+    font-weight: bold; /* Grassetto per un impatto visivo più forte */
+    text-transform: uppercase; /* Tutto maiuscolo */
+    letter-spacing: 0.1em; /* Spaziatura tra le lettere per un look moderno */
+    color: #fff; /* Colore bianco */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Aggiunge un effetto di transizione */
+}
+
+
+#about {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+}
+.about-box {
+    background-color: #f8f9fa; /* Colore di sfondo chiaro */
+    border: 2px solid #ddd;   /* Bordo sottile */
+    border-radius: 10px;      /* Angoli arrotondati */
+    padding: 20px;            /* Spazi interni */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+
+}
+
+
+#about.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-body ul {
+    text-align: left;      /* Allinea il testo a sinistra */
+    padding-left: 20px;    /* Aggiunge un'indentazione per il margine dell'elenco */
+    margin: 0;             /* Rimuove margini extra */
+    list-style-position: inside; /* Posiziona i puntini all'interno */
+}
+
+
+.card-title {
+    color: #007bff; 
+    font-weight: bold; /* (Opzionale) Per un effetto più marcato */
+}
+
+.card-title2 {
+    color: #0056b3; 
+    font-weight: 600; /* (Opzionale) Grassetto intermedio */
+}
+.card-body h6 {
+    color: #007bff; /* Blu personalizzato */
+    text-align: justify;
+}
+
+/* Allineamento dei titoli dei progetti a sinistra */
+
+.progetto-titolo {
+    font-weight: bold;
+    display: inline; /* Per mantenere il testo sulla stessa riga */
+    margin-right: 10px; /* Distanza tra il titolo e la descrizione */
+}
+
+/* Allineare il testo della descrizione a sinistra, ma senza andare a capo sotto strong */
+.card-body p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.card-body p strong {
+    display: inline;  /* Assicurati che strong non vada a capo */
+}
+
+/*BOTTONE */
+.btn-primary {
+    display: inline-block;
+    margin-top: 10px; /* Per spostarlo leggermente più in basso */
+    background-color: #0078d7;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #0078d7;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Per un effetto fluido */
+}
+
+.btn-primary:hover {
+    background-color: #fff; /* Cambia sfondo in bianco */
+    color: #0078d7; /* Cambia testo in blu */
+    border-color: #0078d7; /* Mantiene il bordo blu */
+    text-shadow: 1px 1px 2px rgba(0, 120, 215, 0.5); /* Aggiunge una leggera ombra al testo */
+    transform: scale(1.05); /* Leggera espansione */
+}
+
+/* Sovrascrive la larghezza di .col-md-6 */
+.col-md-6.custom-width {
+    width: auto !important; /* Rimuove il 50% */
+    flex: 1; /* Permette al contenuto di adattarsi */
+}
+
+.card {
+    background-color: #f8f9fa; /* Sfondo chiaro */
+    border: 2px solid #ddd;   /* Bordo sottile */
+    border-radius: 10px;      /* Angoli arrotondati */
+    padding: 20px;            /* Spazi interni */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03); /* Leggero ingrandimento */
+}
+
+.btn-primary {
+    background-color: #0078d7;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Sezione contatti */
+.contact-section {
+    background-color: #f8f9fa; /* Sfondo chiaro */
+    color: #333; /* Colore del testo */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-section p.lead {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #555; /* Colore leggermente più chiaro */
+}
+
+/* Icone social */
+.social-icons a {
+    font-size: 2rem; /* Dimensione delle icone */
+    color: #0078d7; /* Blu primario */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #005bb5; /* Colore blu scuro durante l'hover */
+    transform: scale(1.2); /* Leggero ingrandimento */
+}
+
+/* Icona specifica (aggiunge più carattere) */
+.contact-icon i {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 2.5rem; /* Più grande delle icone standard */
+}
+
+
